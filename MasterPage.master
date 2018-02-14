@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Grid View" Value="Grid View"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ListView.aspx" Text="List View" Value="List View"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Form View.aspx" Text="Form View" Value="Form View"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/WebPage.aspx" Text="WebPage" Value="WebPage"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
